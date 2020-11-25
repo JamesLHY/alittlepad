@@ -1,10 +1,12 @@
 <template>
-    <div>Statistic</div>
+  <default-layout>statistic</default-layout>
 </template>
 
 <script lang="ts">
+    import DefaultLayout from "@/components/defaultLayout.vue";
     export default {
-        name: "Statistic"
+        name: "Statistic",
+        components: {DefaultLayout}
     }
 </script>
 

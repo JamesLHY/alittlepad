@@ -1,10 +1,17 @@
 <template>
-    <div>Labels</div>
+    <default-layout>
+     labels
+    </default-layout>
 </template>
 
 <script lang="ts">
+
+
+    import DefaultLayout from "@/components/defaultLayout.vue";
+
     export default {
-        name: "Labels"
+        name: "Labels",
+        components: {DefaultLayout},
     }
 </script>
 
