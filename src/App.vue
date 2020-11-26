@@ -17,7 +17,14 @@
         padding: 0;
         box-sizing: border-box;
     }
-
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+    }
 </style>
 <script>
 
