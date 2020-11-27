@@ -7,9 +7,14 @@ import defaultLayout from "@/components/defaultLayout.vue";
 
 
 Vue.config.productionTip = false
-Vue.component('default-layout',defaultLayout)
+Vue.component('default-layout', defaultLayout)
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    render: h => h(App)
 }).$mount('#app')
+window.onload = function () {
+    setTimeout(function () {
+        window.scrollTo(0, 1000);
+    }, 0)
+};

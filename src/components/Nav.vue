@@ -62,7 +62,7 @@
     }
 
     .tuber {
-        position: fixed;
+        position: absolute;
         border-radius: 50%;
         bottom: 20px;
         background: #fdda48;
@@ -74,16 +74,10 @@
 
     .tuber-name {
         bottom: 0;
-        position: fixed
+        position: absolute;
     }
 
-    .icon {
-        width: 2em;
-        height: 2em;
-        vertical-align: -0.15em;
-        fill: currentColor;
-        overflow: hidden;
-    }
+
 
     .router-link-container {
         position: relative;

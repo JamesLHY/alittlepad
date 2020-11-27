@@ -12,7 +12,7 @@
         text-align: center;
         color: #2c3e50;
     }
-    body {
+    body,ul{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -24,10 +24,19 @@
         align-items: center;
         text-decoration: none;
         color: inherit;
+        -webkit-tap-highlight-color:rgba(0,0,0,0)
+    }
+    .icon {
+        width: 2em;
+        height: 2em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
     }
 </style>
 <script>
 
     export default {
+
     }
 </script>

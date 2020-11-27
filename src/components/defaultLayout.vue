@@ -26,5 +26,6 @@
     .content {
         flex-grow: 1;
         overflow: auto;
+        height: 88vh;
     }
 </style>
