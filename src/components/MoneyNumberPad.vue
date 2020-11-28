@@ -1,5 +1,6 @@
 <template>
     <div class="numberPad">
+        {{output}}
         <button>7</button>
         <button>8</button>
         <button>9</button>
@@ -9,7 +10,7 @@
             </svg>
             今天
         </button>
-        <button>4</button>
+        <button @click="input">4</button>
         <button>5</button>
         <button>6</button>
         <button>+</button>
@@ -29,8 +30,15 @@
 </template>
 
 <script lang="ts">
-    export default {
-        name: "MoneyNumberPad"
+    import Vue from 'vue';
+    import {Component} from "vue-property-decorator";
+    @Component
+    export default class MoneyNumberPad extends Vue{
+        output='';
+        input(event: MouseEvent){
+            const button = (event.target as HTMLButtonElement)
+            this.output += button.textContent
+        }
     }
 </script>
 
