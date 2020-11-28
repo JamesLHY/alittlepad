@@ -3,7 +3,7 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
-import defaultLayout from "@/components/defaultLayout.vue";
+import defaultLayout from "@/components/DefaultLayout.vue";
 
 
 Vue.config.productionTip = false

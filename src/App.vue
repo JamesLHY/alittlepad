@@ -33,6 +33,16 @@
         fill: currentColor;
         overflow: hidden;
     }
+    ul {
+        display: flex;
+        flex-direction: row;
+        > li{
+            list-style: none;
+        }
+    }
+    button, input{
+        outline: none;
+    }
 </style>
 <script>
 
