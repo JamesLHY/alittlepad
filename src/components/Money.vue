@@ -1,9 +1,9 @@
 <template>
-    <default-layout class="container" ref="container">
-        <MoneyTabs class="moneyTabs" ref="moneyTabs"/>
-        <MoneyContent class="moneyContent" ref="moneyContent"/>
-        <MoneyNote class="moneyNote" ref="moneyNote"/>
-        <MoneyNumberPad class="moneyNumberPad" ref="moneyNumberPad"/>
+    <default-layout>
+        <MoneyTabs/>
+        <MoneyContent :tags="tags"/>
+        <MoneyNote/>
+        <MoneyNumberPad/>
     </default-layout>
 </template>
 
@@ -16,7 +16,17 @@
     export default {
         name: "Money",
         components: {MoneyNote, MoneyNumberPad, MoneyContent, MoneyTabs},
+        data() {
+            return {
+                tags: [
+                    {icon: 'study', name: '学习'},
+                    {icon: 'gift', name: '礼物'},
+                    {icon: 'daily', name: '日用'},
+                    {icon: 'pet', name: '宠物'}
+                ]
+            }
 
+        }
     }
 </script>
 <style scoped lang="scss">
