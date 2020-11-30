@@ -5,22 +5,27 @@
                 <use xlink:href="#icon-note"></use>
             </svg>
                 备注:</span>
-        <input type="text" placeholder="点击添加备注..">
+        <input type="text" placeholder="点击添加备注.." v-model="note">
         <span>0</span>
     </div>
 </template>
 
 <script lang="ts">
-    export default {
-        name: "MoneyNote"
+    import Vue from 'vue'
+    import {Component} from "vue-property-decorator";
+
+    @Component
+    export default class MoneyNote extends Vue {
+        note = '';
     }
 </script>
 
 <style scoped lang="scss">
-    .icon{
+    .icon {
         width: 1em;
         height: 1em;
     }
+
     .note {
         background: #EEF4F6;
         font-size: 20px;
