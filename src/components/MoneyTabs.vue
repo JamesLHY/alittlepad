@@ -1,24 +1,26 @@
 <template>
     <div class="topNav">
-        <span class="moneyMode" :class="type === '-' && 'selected'" @click="selectType('-')">支出</span>
-        <span class="moneyMode" :class="type === '+' && 'selected'" @click="selectType('+')">收入</span>
+        <span class="moneyMode" :class="value === '-' && 'selected'" @click="selectType('-')">支出</span>
+        <span class="moneyMode" :class="value === '+' && 'selected'" @click="selectType('+')">收入</span>
         <span class="cancel">取消</span>
     </div>
 </template>
 
 <script lang="ts">
     import Vue from 'vue'
-    import {Component} from "vue-property-decorator";
+    import {Component, Prop} from "vue-property-decorator";
 
     @Component
     export default class MoneyTabs extends Vue {
-        type='-';
+        @Prop({default: '-'}) readonly value!: string
+
         selectType(type: string) {
             if (type !== '-' && type !== '+') {
                 throw new Error('type is unknown')
             }
-            this.type = type
+            this.$emit('update:value', type)
         }
+
     }
 
 </script>

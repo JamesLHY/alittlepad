@@ -69,7 +69,6 @@
         padding: 14px;
         margin: 0 auto;
         box-shadow: 0px 0px 1px 1px #bbbbb4;
-
     }
 
     .tuber-name {
@@ -77,10 +76,8 @@
         position: absolute;
     }
 
-
-
-
     .router-link-container {
+
         position: relative;
         min-height: 40px;
         display: flex;
