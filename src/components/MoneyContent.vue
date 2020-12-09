@@ -1,14 +1,15 @@
 <template>
     <div class="tag-wrapper">
         <ul>
-            <li v-for="tag in tags" :key="tag.id" @click="toggle(tag)" :class="{selected:selectedTag.indexOf(tag)>=0}">
+            <li v-for="tag in dataSource" :key="tag.icon" @click="toggle(tag)"
+                :class="{selected:selectedTag.indexOf(tag)>=0}">
                 <svg class="icon" aria-hidden="true">
                     <use :xlink:href="`#icon-${tag.icon}`"></use>
                 </svg>
                 <span>{{tag.name}}</span>
 
             </li>
-            <li >
+            <li>
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-setting"></use>
                 </svg>
@@ -24,23 +25,16 @@
 
     @Component
     export default class MoneyContent extends Vue {
-
-        @Prop() tags: string[] | undefined;
+        @Prop() dataSource: string[] | undefined;
         selectedTag: string[] = [];
-
-
         toggle(tag: string) {
-            //如果有selected这个 class
             if (this.selectedTag.indexOf(tag) >= 0) {
-                //就slice掉
                 this.selectedTag.splice(this.selectedTag.indexOf(tag), 1)
             } else {
-                //否则push进去
                 this.selectedTag.push(tag)
             }
             this.$emit('update:value', this.selectedTag)
         }
-
     }
 </script>
 

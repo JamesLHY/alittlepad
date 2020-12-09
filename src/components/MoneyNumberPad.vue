@@ -15,16 +15,13 @@
             <button @click="input">8</button>
             <button @click="input">9</button>
             <button >今天</button>
-
             <button @click="input">4</button>
             <button @click="input">5</button>
             <button @click="input">6</button>
-
             <button @click="input">1</button>
             <button @click="input">2</button>
             <button @click="input">3</button>
             <button @click="ok">完成</button>
-
             <button @click="input">.</button>
             <button @click="input">0</button>
             <button @click="remove">
@@ -41,7 +38,7 @@
 
 <script lang="ts">
     import Vue from 'vue';
-    import {Component, Watch} from "vue-property-decorator";
+    import {Component} from "vue-property-decorator";
 
     @Component
     export default class MoneyNumberPad extends Vue {
@@ -70,6 +67,9 @@
 
         ok() {
             this.$emit('update:value', this.output, this.value)
+            this.$emit(('saveRecord'),this.output, this.value)
+            this.output = '0'
+            this.value = ''
         }
 
         remove() {
